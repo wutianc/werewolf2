@@ -1,0 +1,31 @@
+html,body{height:100%;overflow:hidden;}
+body{background-color:#122B40;}
+ul,li{list-style: none;padding: 0;margin: 0;}
+.body{width:90%;margin-left:5%;margin-top:3%;height:90%;background-color:#F1F1F1;overflow: scroll;}
+.header{width:100%;height:5rem;text-align: center;line-height:5rem;
+		font-size:3rem;}
+
+
+.rooms{background-color:#F1F1F1;}
+.room{margin:1rem 1em;background-color:#f1f1f1;border-radius:0.5rem;overflow: hidden;box-shadow:0 0 1px 1px #CCCCCC;}
+
+
+.roomTop{width:100%;background-color:#CCCCCC;padding:1rem 0;}
+.roomTop .roomName{margin-left:1rem;font-size:2rem;font-weight:bold;}
+.roomTop .roomNum{float: right;margin-right:2rem;color:#1B6D85;font-size:2rem;}
+.roomTop .roomNum a{color:#1B6D85;text-decoration: none;}
+.roomTop .roomNum:hover{color:#1B8AEF;}
+.roomTop .roomNum:hover a{color:#1B8AEF;}
+.seats{background-color:#FFFFFF;}
+.seat{width:90%;margin-left:5%;margin:1rem 0;height:3rem;line-height:3rem;background-color:#FFFFFF;overflow: hidden;
+		border-radius: 0.5rem;text-align: center;border:1px solid #CCCCCC;box-sizing: border-box;}
+.seat:hover{box-shadow:0 0 1px 1px #CCCCCC;cursor: pointer;}
+
+
+.roomBtn{width:100%;background-color:#FFFFFF;text-align:center;padding:1.5rem 0;}
+.roomBtn a{border:1px solid #CCCCCC;padding:0.8rem 4rem;background-color:#1B8AEF;color:#FFFFFF;
+		border-radius:0.5rem;text-decoration: none;font-size:2rem;}
+.roomBtn a:hover{color:#FFFFFF;background-color:#3074AE;}
+
+.setbox{width:36rem;height:15rem;display:none;position: fixed;overflow: hidden;border:1px solid #FFFFFF;background-color:#FFFFFF;
+		left:50%;top:15%;z-index:1;margin-left:-18rem;box-shadow:0 0 1px 1px #F1F1F1;}

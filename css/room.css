@@ -1,0 +1,43 @@
+html,body{height:100%;overflow:hidden;}
+body{background-color:#122B40;}
+ul,li{list-style: none;padding: 0;margin: 0;}
+.body{width:90%;margin-left:5%;margin-top:3%;height:90%;background-color:#F1F1F1;overflow: scroll;}
+
+.header{width:100%;height:5rem;text-align: center;line-height:5rem;
+		font-size:3rem;}
+.seats{background-color:#F1F1F1;}
+.seats .top{width:100%;margin:0.5rem 0;overflow: hidden;}
+.seats .top span:first-child{float:left;margin-left:1rem;font-size:2.4rem;line-height:3rem;color:#204D74;}
+.seats .top span:last-child{float:right;margin-right:1rem;line-height:3rem;padding:0rem 1rem;color:#FFFFFF;background-color:#1B6D85;
+		border-radius:0.5rem;box-shadow:0 0 1px 1px #1B8AEF;cursor:pointer;}
+
+
+.seat{width:94%;margin:1rem 3%;background-color:#3276b1;text-align: center;border-radius:0.5rem;border:2px solid #3276b1;
+		box-sizing: border-box;}
+.seatTop{padding:1rem 0;overflow:hidden;color:#FFFFFF}
+.seatTop .name{float: left;line-height:1rem;margin-left:1rem;}
+.seatTop .seatNum{float: right;line-height:1rem;margin-right:1rem;}
+.seatInfo{background-color:#FFFFFF;width:100%;overflow: hidden;padding:1rem 0;}
+.grade,.integral{width:50%;float: left;}
+.grade span:first-child,.integral span:first-child{float: left;margin-left:1rem;color:#1a619f;}
+.integral span:first-child{color: #C9302C;}
+.grade span{margin-left:1rem;}
+
+.control{background-color:#FFFFFF;padding:1.5rem 0;color:#333333;overflow:hidden;font-weight: bold;border-radius:0 0 0.5rem 0.5rem;box}
+.control .juese,.deat{padding:0.5rem 1rem;border-radius:0.4rem;float: right;margin-right:1rem;cursor: pointer;}
+.control .juese{box-shadow: 0 0 1px 1px #999999 inset;float:left;margin-left:1rem;position: relative;top:0;left:0;}
+.control .juese:hover{background-color:#ECECEC;}
+.control .juese i{margin-left:0.2rem;}
+.selectJ{background-color:#FFFFFF;position: absolute;top:11.5rem;border:1px solid #CCCCCC;
+		margin-left:0.3rem;border-radius:0.5rem;overflow: hidden;z-index:1;display:none;}
+.selectJ li{text-align: center;padding:0.3rem 3rem;border-bottom:1px solid #CCCCCC;cursor: pointer;}
+.selectJ li:hover{background-color:#1B6D85;color:#FFFFFF;}
+.deat{background-color:#C9302C;color:#FFFFFF;box-shadow:0 0 1px 1px #FFFFFF inset;}
+.deat:hover{background-color:#843534;}
+
+
+.footer{background-color:#F1F1F1;width:100%;overflow: hidden;}
+.gameControl{width:94%;margin-left:3%;padding:2rem 0; color: #FFFFFF;font-weight: bold;}
+.gameControl .end{padding:0.5rem 1rem;background-color:#3379b5;cursor: pointer;border-radius:0.2rem;}
+.gameControl .dissolve{padding:0.5rem 1rem;background-color:#d64e4a;cursor: pointer;border-radius:0.2rem;}
+.gameControl .end:hover,.gameControl .dissolve:hover{position:relative;left:0;top:-5px;}
