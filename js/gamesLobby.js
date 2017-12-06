@@ -14,10 +14,10 @@ var funs={
 			type:"post",
 			url:"",
 			success:function(data){
-				
+
 			},
 			error:function(data){
-				
+
 			},
 			async:true
 		});
@@ -40,4 +40,3 @@ var funs={
 		});
 	}
 }
-	
