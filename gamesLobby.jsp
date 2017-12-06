@@ -15,11 +15,11 @@
     session.invalidate();
   }
   try{
-    userWeb= ((nds.control.web.UserWebImpl)nds.control.web.WebUtils.getSessionContextManager(session).getActor(nds.util.WebKeys.USER)); 
+    userWeb= ((nds.control.web.UserWebImpl)nds.control.web.WebUtils.getSessionContextManager(session).getActor(nds.util.WebKeys.USER));
   }catch(Throwable userWebException){
     System.out.println("########## found userWeb=null##########"+userWebException);
   }
-  
+
 if(userWeb==null || userWeb.isGuest()){
   if(request.getParameter("checkSession")!=null){out.write("noSession");return;}
   String redirect=java.net.URLEncoder.encode(request.getRequestURI()+"?"+request.getQueryString() ,"UTF-8");
@@ -28,8 +28,8 @@ if(userWeb==null || userWeb.isGuest()){
 }
 
 //查询门店当前状态
- List v=QueryEngine.getInstance().doQueryList("select a.id,a.name,a.room_num,a.status,a.type  from ROOM  a where a.isactive='Y'");  
- 
+ List v=QueryEngine.getInstance().doQueryList("select a.id,a.name,a.room_num,a.status,a.type  from ROOM  a where a.isactive='Y'");
+
 %>
 <!DOCTYPE html>
 <html>
@@ -44,7 +44,7 @@ if(userWeb==null || userWeb.isGuest()){
 	</head>
 	<body>
 		<div class="header">
-			
+
 		</div>
 		<div class="container-fluid rooms">
 			<div class="row">
@@ -52,11 +52,11 @@ if(userWeb==null || userWeb.isGuest()){
    <%
     if(v.size()>0){
        for(int j=0;j< v.size();j++){
-     String ID=((List)v.get(j)).get(0).toString(); 
-     String NAME=((List)v.get(j)).get(1).toString();
-     String STATUS=((List)v.get(j)).get(2).toString();
-     String TYPE=((List)v.get(j)).get(3).toString();
-     String ROOMNUM=((List)v.get(j)).get(4).toString();
+       String ID=((List)v.get(j)).get(0).toString();
+       String NAME=((List)v.get(j)).get(1).toString();
+       String STATUS=((List)v.get(j)).get(2).toString();
+       String TYPE=((List)v.get(j)).get(3).toString();
+       String ROOMNUM=((List)v.get(j)).get(4).toString();
      %>
 	      	<div class="room">
 				<div class="roomTop">
@@ -69,12 +69,12 @@ if(userWeb==null || userWeb.isGuest()){
 			<%
 				List y=QueryEngine.getInstance().doQueryList("select a.name from SEAT t, C_ROL a,room b where t.isactive = 'Y' and b.room_num=<%=ROOMNUM%>  and t.ad_org_id=a.id and t.room_id=b.id;");
 				String NAME=((List)y.get(j)).get(0).toString();
-			    
+
 			    for(int j=0;j<12;j++){
 			       	if(y.size()<=j){
-			     
+
 			%>
-							
+
 						<div class="col-xs-3">
 							<div class="seat">
 								<%=NAME%>
@@ -89,15 +89,15 @@ if(userWeb==null || userWeb.isGuest()){
 							</div>
 						</div>
 					%>
-					
+
 					}
 				}
-				%>			
-							
+				%>
+
 						</div>
 					</div>
 				</div>
-			
+
 					<%
 						if(TYPE=="1"){
 							%>
@@ -111,16 +111,16 @@ if(userWeb==null || userWeb.isGuest()){
 						</div>
 							<%
 						)
-							
+
 					%>
-					
-				
-			</div>	
-     <% 
-    
+
+
+			</div>
+     <%
+
     }
   }
-     %>   
+     %>
 			</div>
  		</div>
 	</div>
