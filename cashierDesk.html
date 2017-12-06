@@ -3,17 +3,119 @@
   <head>
     <meta charset="utf-8">
     <title>收银台界面</title>
-    <link rel="stylesheet" href="css/cashierDesk.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/cashierDesk.css">
   </head>
   <body>
     <div class="body">
         <div class="header">
-            <h2>收银台</h2>
+            <span>收银台</span>
+            <a class="chargeback">￥退单</a>
         </div>
-        <div class="container">
-            <div class="cashItem">
-            fjksd
-            </div>
+        <div class="products">
+          <div class="category">饮料 <i class="glyphicon glyphicon-chevron-down"></i>
+            <ul class="product" style="display:none">
+              <li>qweqw</li>
+            </ul>
+          </div>
+        </div>
+        <div class="containers">
+          <!--零售单头部-->
+          <table class="theme">
+            <tr>
+              <td>#</td>
+              <td>商品名称</td>
+              <td>单价</td>
+              <td>会员价</td>
+              <td>数量</td>
+              <td>总价</td>
+              <td>操作</td>
+            </tr>
+          </table>
+          <!-- 零售明细 -->
+          <div class="box">
+            <table class="cashItem">
+                <tr>
+                    <td>1</td>
+                    <td>奶茶</td>
+                    <td>￥11/杯</td>
+                    <td>￥10/杯</td>
+                    <td>1</td>
+                    <td>11</td>
+                    <td><a href="#">删除</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>奶茶</td>
+                    <td>￥11/杯</td>
+                    <td>￥10/杯</td>
+                    <td>1</td>
+                    <td>11</td>
+                    <td><a href="#">删除</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>奶茶</td>
+                    <td>￥11/杯</td>
+                    <td>￥10/杯</td>
+                    <td>1</td>
+                    <td>11</td>
+                    <td><a href="#">删除</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>奶茶</td>
+                    <td>￥11/杯</td>
+                    <td>￥10/杯</td>
+                    <td>1</td>
+                    <td>11</td>
+                    <td><a href="#">删除</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>奶茶</td>
+                    <td>￥11/杯</td>
+                    <td>￥10/杯</td>
+                    <td>1</td>
+                    <td>11</td>
+                    <td><a href="#">删除</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>奶茶</td>
+                    <td>￥11/杯</td>
+                    <td>￥10/杯</td>
+                    <td>1</td>
+                    <td>11</td>
+                    <td><a href="#">删除</a></td>
+                </tr>
+            </table>
+          </div>
+        </div>
+        <!--footer-->
+        <div class="footers">
+          <div class="count">
+            <span>合计:</span>
+            <span>￥16</span>
+          </div>
+          <div class="count">
+            <span>会员价:</span>
+            <span>￥12</span>
+          </div>
+          <div class="payways">
+            <ul>
+              <li class="selected">现金</li>
+              <li>微信</li>
+              <li>支付宝</li>
+              <li>会员卡</li>
+            </ul>
+          </div>
+          <div class="entervip">
+            <input type="text" name="vip" onkeyup="" placeholder="会员卡号">
+          </div>
+          <div class="accounts">
+            <input type="button" class="" value="结算并打印">
+          </div>
         </div>
     </div>
   </body>
