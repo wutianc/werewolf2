@@ -1,4 +1,34 @@
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{
+    width: 5px;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color:green;
+}
+
+
+
 html,body{height:100%;overflow:hidden;}
 body{background-color:#122B40;}
 ul,li{list-style: none;padding: 0;margin: 0;}
-.body{width:90%;margin-left:5%;margin-top:3%;height:90%;background-color:#F1F1F1;overflow: scroll;}
+.body{width:90%;margin-left:5%;margin-top:3%;height:90%;background-color:#F1F1F1;overflow-y: auto;}
+
+.body .header{text-align: center;color:#333333}
+.body .container{width:94%; margin:0 3%;border:1px solid #000000}
+.body .container .cashItem{width:100%;height: ;overflow: hidden;overflow:auto;}
