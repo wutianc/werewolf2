@@ -26,7 +26,7 @@ table,tr,td{margin: 0;padding: 0;}
 html,body{height:100%;overflow:hidden;font-family: "黑体";}
 body{background-color:#122B40;}
 ul,li{list-style: none;padding: 0;margin: 0;}
-.body{width:80%;margin-left:10%;margin-top:3%;height:90%;background-color:#ebebee;overflow: hidden;overflow-y: auto;border: 0}
+.body{width:80%;margin-left:10%;margin-top:1%;height:90%;background-color:#ebebee;overflow: hidden;overflow-y: auto;border: 0}
 
 .body .header{width:90%; margin:1rem 5%;line-height:3rem}
 .body .header span{color:#333333;font-weight:bold;font-size:3rem}
@@ -42,7 +42,7 @@ color: #333333;border-radius: 0.5rem;font-size:1.4rem;box-shadow:0 0 2rem 0 #fff
   border-right:1px solid #cccccc;border-left:1px solid #cccccc;}
 .body .containers .cashItem,.body .containers .theme{width:100%;background-color:#f0f0f0;}
 .body .containers .theme tr td{border: 1px solid #cccccc;color:#333333;padding:0.8rem 0;font-weight: bold;}
-.box{background-color:red;height:10rem;overflow:hidden;overflow: auto;background-color: #f9f9f9}
+.box{background-color:red;height:18rem;overflow:hidden;overflow: auto;background-color: #f9f9f9}
 .body .containers .cashItem{background-color: #f9f9f9}
 .body .containers .cashItem tr td{border: 1px solid #cccccc;color:#333333;padding:0.3rem 0;}
 .body .containers tr td:nth-of-type(1){width:5%;}
