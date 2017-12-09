@@ -34,15 +34,15 @@ ul,li{list-style: none;padding: 0;margin: 0;}
 font-weight:bold;float:right;cursor: pointer;font-size:2rem}
 .body .header .chargeback:hover{background-color: #c94844}
 
-.products{width:90%; margin:1rem 5%;overflow: hidden;}
+.products{width:90%; margin-left: 5%;height:4rem;}
 .products .category{float:left;border:1px solid #cccccc;margin-left:0.3rem;padding:0.5rem 0.5rem;margin-top:0.5rem;background-color:#edeef2;
-color: #333333;border-radius: 0.5rem;font-size:1.4rem;box-shadow:0 0 2rem 0 #ffffff inset;}
+color: #333333;border-radius: 0.5rem;font-size:1.4rem;box-shadow:0 0 2rem 0 #ffffff inset;cursor: pointer;}
 
 .body .containers{width:90%;margin:1rem 5%;border-bottom:1px solid #cccccc;
   border-right:1px solid #cccccc;border-left:1px solid #cccccc;}
 .body .containers .cashItem,.body .containers .theme{width:100%;background-color:#f0f0f0;}
 .body .containers .theme tr td{border: 1px solid #cccccc;color:#333333;padding:0.8rem 0;font-weight: bold;}
-.box{background-color:red;height:18rem;overflow:hidden;overflow: auto;background-color: #f9f9f9}
+.box{background-color:red;height:16rem;overflow:hidden;overflow: auto;background-color: #f9f9f9}
 .body .containers .cashItem{background-color: #f9f9f9}
 .body .containers .cashItem tr td{border: 1px solid #cccccc;color:#333333;padding:0.3rem 0;}
 .body .containers tr td:nth-of-type(1){width:5%;}
@@ -66,10 +66,12 @@ color: #333333;border-radius: 0.5rem;font-size:1.4rem;box-shadow:0 0 2rem 0 #fff
 
 .selected{background-color: #2e6ea5;color:#ffffff}
 
-
-
-
-
+a:hover{text-decoration:none;cursor: pointer;}
+/*商品类 商品*/
+.category{position: relative;}
+.category .product{position: absolute;left: 0;top:0;display: none;border:1px solid #cccccc;;background-color:#ffffff;padding:0.3rem 0;width:150%;text-align: center;margin-left:-25%;margin-top:3rem;}
+.category .product li{border-bottom:1px solid #cccccc;}
+.category .product li:last-child{border-bottom:0px solid #cccccc;}
 
 
 
