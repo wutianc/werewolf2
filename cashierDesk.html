@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/cashierDesk.css">
     <script src="js/jquery-2.0.0.js" charset="utf-8"></script>
     <script src="js/cashDesk.js" charset="utf-8"></script>
+    <script src="js/shuju.js" charset="utf-8"></script>
   </head>
   <body>
     <div class="body">
@@ -16,24 +17,6 @@
         </div>
         <div class="products">
           <!-- 商品类 -->
-          <div class="category">饮料<i class="glyphicon glyphicon-chevron-down"></i>
-            <ul class="product">
-              <li>可乐</li>
-              <li>奶茶1</li>
-              <li>奶茶2</li>
-              <li>奶茶3</li>
-            </ul>
-          </div>
-
-          <div class="category">饮料<i class="glyphicon glyphicon-chevron-down"></i>
-            <ul class="product">
-              <li>可乐</li>
-              <li>奶茶1</li>
-              <li>奶茶2</li>
-              <li>奶茶3</li>
-            </ul>
-          </div>
-
         </div>
         <div class="containers">
           <!--零售单头部-->
@@ -51,8 +34,7 @@
           <!-- 零售明细 -->
           <div class="box">
             <table class="cashItem" id="cashItem">
-              
-
+              <!--商品明细部分-->
             </table>
           </div>
         </div>
@@ -60,11 +42,11 @@
         <div class="footers">
           <div class="count">
             <span>合计:</span>
-            <span>￥16</span>
+            <span id="price">￥0</span>
           </div>
           <div class="count">
             <span>会员价:</span>
-            <span>￥12</span>
+            <span id="vipprice">￥0</span>
           </div>
           <div class="payways">
             <ul>
@@ -78,7 +60,7 @@
             <input type="text" name="vip" onkeyup="" placeholder="会员卡号">
           </div>
           <div class="accounts">
-            <input type="button" class="" value="结算并打印">
+            <input type="button" id="submit" class="" value="结算并打印">
           </div>
         </div>
     </div>
