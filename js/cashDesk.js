@@ -16,6 +16,7 @@ var ms={
       });
       jQuery('.payways>ul>li').eq(0).addClass('selected');
   },
+  //初始界面显示
   showhtml:function () {
     retailItem=shuju;
     //i
@@ -31,8 +32,9 @@ var ms={
       }  //j
     }  //i
   },
+  // 点击事件汇总
   clicks:function() {
-    // 点击事件汇总
+    
     jQuery('body').on("click", ".category", function () {
       ms.categoryClick(jQuery(this));
     });
@@ -55,6 +57,7 @@ var ms={
       ms.choosepayway(jQuery(this));
     });
   },
+  //删除商品明细
   productdelete:function (ele) {
     ele.parent().remove();
     for(var i=0;i<jQuery('.num').size();i++){
