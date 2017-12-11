@@ -24,9 +24,8 @@
 
 table,tr,td{margin: 0;padding: 0;}
 html,body{height:100%;overflow:hidden;font-family: "黑体";}
-body{background-color:#122B40;}
 ul,li{list-style: none;padding: 0;margin: 0;}
-.body{width:80%;margin-left:10%;margin-top:1%;height:90%;background-color:#ebebee;overflow: hidden;overflow-y: auto;border: 0}
+.body{width:100%;margin-top:1%;height:90%;background-color:#ebebee;overflow: hidden;overflow-y: auto;border: 0}
 
 .body .header{width:90%; margin:1rem 5%;line-height:3rem}
 .body .header span{color:#333333;font-weight:bold;font-size:3rem}
@@ -58,7 +57,7 @@ color: #333333;border-radius: 0.5rem;font-size:1.4rem;box-shadow:0 0 2rem 0 #fff
 .footers .count{float: left;width:20%;height:10rem;line-height:5rem;text-align:left;font-size: 2.4rem;color:#444444;font-weight: bold;}
 .footers .count span:nth-of-type(2){color: #a94442}
 .footers .payways{width:15%;float:left;background-color: #ffffff;}
-.footers .payways ul li{padding:0.5rem 3rem;box-shadow:0 0 1px 1px #cccccc;}
+.footers .payways ul li{padding:0.5rem 3rem;box-shadow:0 0 1px 1px #cccccc;cursor: pointer;}
 .footers .payways ul li:last-child{border-bottom:1px solid #999999;}
 .footers .entervip,.footers .accounts{width:18%;float: left;margin-left:4%;}
 .footers .entervip input{width:90%;height:3rem}

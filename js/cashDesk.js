@@ -1,4 +1,4 @@
-$(function() {
+jQuery(function() {
   ms.clicks();
   ms.showhtml();
 })
@@ -7,14 +7,14 @@ var submitItem={};
 var ms={
   //初始化收银台
   init:function () {
-      $('#cashItem').html("");
-      $('#price').text("￥"+0);
-      $('#vipprice').text("￥"+0);
+      jQuery('#cashItem').html("");
+      jQuery('#price').text("￥"+0);
+      jQuery('#vipprice').text("￥"+0);
       submitItem={};
-      $('.payways>ul>li').each(function () {
-        $(this).removeClass();
+      jQuery('.payways>ul>li').each(function () {
+        jQuery(this).removeClass();
       });
-      $('.payways>ul>li').eq(0).addClass('selected');
+      jQuery('.payways>ul>li').eq(0).addClass('selected');
   },
   showhtml:function () {
     retailItem=shuju;
@@ -22,50 +22,50 @@ var ms={
     for(var i=0;i<retailItem.class.length;i++){
       var innerHtml='<div class="category">'+retailItem.class[i]+'<i class="glyphicon glyphicon-chevron-down"></i>'+
         '<ul class="product">'+'</ul>'+'</div>';
-      $('.products').append(innerHtml);
+      jQuery('.products').append(innerHtml);
       //j
       for(var j=0;j<retailItem.param.length;j++){
         if(retailItem.param[j].class==retailItem.class[i]){
-          $('.product').eq(i).append("<li>"+retailItem.param[j].name+"<li>");
+          jQuery('.product').eq(i).append("<li>"+retailItem.param[j].name+"<li>");
         }
       }  //j
     }  //i
   },
   clicks:function() {
     // 点击事件汇总
-    $('body').on("click", ".category", function () {
-      ms.categoryClick($(this));
+    jQuery('body').on("click", ".category", function () {
+      ms.categoryClick(jQuery(this));
     });
-    $('body').on("click", ".product>li", function () {
-      //alert($(this).text());
-      ms.productClick($(this));
+    jQuery('body').on("click", ".product>li", function () {
+      //alert(jQuery(this).text());
+      ms.productClick(jQuery(this));
     });
     // 删除事件
-    $('body').on("click", ".delete", function () {
-      ms.productdelete($(this))
+    jQuery('body').on("click", ".delete", function () {
+      ms.productdelete(jQuery(this))
     });
     //结算并打印
-    $('body').on("click", "#submit", function () {
+    jQuery('body').on("click", "#submit", function () {
       ms.submitSave();
     });
-    $('body').on("click", ".payways ul>li", function () {
-      $('.payways>ul>li').each(function () {
-        $(this).removeClass();
+    jQuery('body').on("click", ".payways ul>li", function () {
+      jQuery('.payways>ul>li').each(function () {
+        jQuery(this).removeClass();
       })
-      ms.choosepayway($(this));
+      ms.choosepayway(jQuery(this));
     });
   },
   productdelete:function (ele) {
     ele.parent().remove();
-    for(var i=0;i<$('.num').size();i++){
-      $('.num').eq(i).text(i+1);
+    for(var i=0;i<jQuery('.num').size();i++){
+      jQuery('.num').eq(i).text(i+1);
     }
   },
     // 大类点击
   categoryClick:function (ele) {
     var ble=true;
-    $('.product').each(function () {
-      if($(this).css("display")=="block"){
+    jQuery('.product').each(function () {
+      if(jQuery(this).css("display")=="block"){
         ble=false;
       }
     });
@@ -78,7 +78,7 @@ var ms={
   //填充商品明细
   productClick:function (ele) {
     var product=ele.text();
-    var num=$('.cashItem tr').size()+1;
+    var num=jQuery('.cashItem tr').size()+1;
     var price=10;
     var vipprice=9;
     for(var j=0;j<retailItem.param.length;j++){
@@ -88,8 +88,8 @@ var ms={
       }
     };
     var ble=true;
-    $('.name').each(function () {
-      if(product==$(this).text()){
+    jQuery('.name').each(function () {
+      if(product==jQuery(this).text()){
         ble=false;
       }
     });
@@ -104,16 +104,16 @@ var ms={
           '<td class="delete"><a>删除</a></td>'+
     '  </tr>';
     if(ble==true){
-      $('#cashItem').append(itemhtml);
+      jQuery('#cashItem').append(itemhtml);
     }else {
-      $('.productitem').each(function () {
-        if($(this).attr('namedata')==product){
-          var sum=$(this).find('.sum').html();
-          var price=$(this).find('.price').html();
+      jQuery('.productitem').each(function () {
+        if(jQuery(this).attr('namedata')==product){
+          var sum=jQuery(this).find('.sum').html();
+          var price=jQuery(this).find('.price').html();
           sum=Number(sum)+1;
 
-          $(this).find('.sum').html(sum);
-          $(this).find('.allprice').html(sum*price);
+          jQuery(this).find('.sum').html(sum);
+          jQuery(this).find('.allprice').html(sum*price);
         }
       })
     };
@@ -127,14 +127,14 @@ var ms={
   sumTotal:function () {
     var sumTotal=0;
     var vipsumTotal=0;
-    $('.productitem').each(function () {
-      var thissum=Number($(this).find('.sum').text());
-      var thisprice=Number($(this).find('.price').text());
-      var thisvipprice=Number($(this).find('.vipprice').text())
+    jQuery('.productitem').each(function () {
+      var thissum=Number(jQuery(this).find('.sum').text());
+      var thisprice=Number(jQuery(this).find('.price').text());
+      var thisvipprice=Number(jQuery(this).find('.vipprice').text())
       sumTotal=sumTotal+thissum*thisprice;
       vipsumTotal=vipsumTotal+thissum*thisvipprice;
-      $('#price').text("￥"+sumTotal);
-      $('#vipprice').text("￥"+vipsumTotal);
+      jQuery('#price').text("￥"+sumTotal);
+      jQuery('#vipprice').text("￥"+vipsumTotal);
     });
   },
   // 打印配置
@@ -152,7 +152,7 @@ var ms={
   },
   // 获取付款方式
   payway:function () {
-    var payway=$('.payways').find('.selected').text();
+    var payway=jQuery('.payways').find('.selected').text();
     return payway;
   }
 }
